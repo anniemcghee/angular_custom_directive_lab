@@ -1,0 +1,40 @@
+body {
+/*  background-color: blue;*/
+}
+
+.btn-animated {
+  /*must set a hard property to convert and use a transition*/
+  width: 100px;
+  height: 34px;
+  transition: width 1s ease, height 2s ease, background-color 1s, font-size 2s;
+}
+
+.btn-animated:hover {
+  width: 250px;
+  height: 80px;
+  background-color: red;
+  font-size: 40px;
+}
+
+.todo-anim {
+
+}
+
+/*this is how you refer ngAnimate + CSS animations*/
+.todo-anim.ng-enter {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.todo-anim.ng-leave {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
